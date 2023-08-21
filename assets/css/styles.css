@@ -499,6 +499,14 @@ body.dark-theme {
   );
 }
 
+.resume__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
 .open_to_work{
   background: linear-gradient(
     90deg,
@@ -1323,7 +1331,7 @@ body.dark-theme {
   .home__description{
     position: relative;
     font-size: var(--h2-font-size);
-    margin-bottom: 5.5rem;
+    margin-bottom: 3.5rem;
     padding-left: 3rem;
   }
   .home__description::after{
@@ -1340,6 +1348,7 @@ body.dark-theme {
     display: flex;
     align-items: center;
     column-gap: .75rem;
+    margin-top: 3rem;
   }
   .home__scroll-text{
     display: block;
@@ -1440,7 +1449,16 @@ body.dark-theme {
   }
   .about__buttons{
     justify-content: initial;
+    margin-bottom: 1.5rem;
+    
   }
+
+  .resume__buttons{
+    justify-content: initial;
+    margin-bottom: 2.5rem;
+    padding-left: 3rem;
+  }
+
   .button__ghost{
     padding: .75rem;
   }
