@@ -1,0 +1,216 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+/* .container .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+} */
+
+.container .video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container header {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.container h1 {
+  font-size: 60px;
+  /* color: #fff; */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.amz {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+.paragraph {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.container p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  max-width: 550px;
+  text-align: center;
+}
+
+.home-text p {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+@media screen and (max-width: 300px) {
+  .container header {
+    font-size: 50px;
+  }
+}
+
+/* For small device */
+@media screen and (max-width: 340px) {
+  .container header {
+    font-size: 30px;
+  }
+
+  .container h1 {
+    font-size: 40px;
+  }
+
+  .paragraph {
+    padding: 15px;
+  }
+
+  .container p {
+    font-size: 14px;
+  }
+
+  .home-text p {
+    font-size: 12px;
+  }
+}
+
+/* For Medium screens */
+@media screen and (min-width: 576px) {
+  .container header {
+    font-size: 35px;
+  }
+
+  .container h1 {
+    font-size: 50px;
+  }
+
+  .paragraph {
+    padding: 18px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+
+  .home-text p {
+    font-size: 13px;
+  }
+}
+
+/* For Large screens */
+@media screen and (min-width: 768px) {
+  .container header {
+    font-size: 40px;
+  }
+
+  .container h1 {
+    font-size: 60px;
+  }
+
+  .paragraph {
+    padding: 20px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+}
+
+/* For Extra-large screens */
+@media screen and (min-width: 1150px) {
+  .container header {
+    font-size: 45px;
+  }
+
+  .container h1 {
+    font-size: 70px;
+  }
+
+  .paragraph {
+    padding: 25px;
+  }
+
+  .container p {
+    font-size: 18px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+  }
+}
+
