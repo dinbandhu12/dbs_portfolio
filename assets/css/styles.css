@@ -138,6 +138,7 @@ body.dark-theme {
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 70%);
   --body-color: hsl(0, 0%, 8%);
+  --body-color-2: rgba(62, 61, 61, 0.481);
   --container-color: hsl(0, 0%, 12%);
 }
 
@@ -172,6 +173,10 @@ body.dark-theme {
 
 .dark-theme .projects__card:hover {
   background-color: var(--body-color);
+}
+
+.dark-theme .blog__card:hover {
+  background-color: var(--body-color-2);
 }
 
 .dark-theme :is(.contact__mail, .contact__input, .contact__label) {
@@ -329,6 +334,10 @@ body.dark-theme {
 
   .project__description{
     margin-top: 3rem;
+  }
+
+  .blog__description{
+    margin-top: 1.5rem;
   }
 
   .project_section {
@@ -762,16 +771,6 @@ body.dark-theme {
   column-gap: 1rem;
 }
 
-.arrow {
-  transition: all 0.4s ease-in-out;
-}
-
-.button:hover {
-  .arrow {
-    transform: translateX(0.5rem);
-    transition: all 0.4s ease-in-out;
-  }
-}
 
 /*=============== SERVICES ===============*/
 .services__container {
@@ -835,24 +834,29 @@ body.dark-theme {
   margin-bottom: 1.25rem;
 }
 
-/*=============== PROJECTS ===============*/
+
+
+/*=============== PROJECTS AND BLOG ===============*/
 .projects {
   background-color: var(--container-color);
   transition: background-color 0.4s;
 }
 
-.projects__container {
+.projects__container,
+.blog__container {
   row-gap: 2rem;
 }
 
-.projects__card {
+.projects__card,
+.blog__card {
   padding: 1rem 1rem 2rem;
   transition: background-color 0.4s;
   /* border-radius: 0.5rem; rounded card corner */
   position: relative; /*you can remove position to move black button*/
 }
 
-.projects_image {
+.projects_image,
+.blog_image {
   position: relative;
   margin-bottom: 0.75rem;
 }
@@ -871,7 +875,15 @@ body.dark-theme {
   transition: all 0.4s ease-in-out;
 }
 
-.project__button {
+.blog__buttonns {
+  display: flex;
+  justify-content: center;
+  margin: 50% 10%;
+  transition: all 0.4s ease-in-out;
+}
+
+.project__button,
+.blog__button {
   /* display: flex;
   align-items: center;
   justify-content: center;
@@ -882,14 +894,20 @@ body.dark-theme {
 }
 
 .project__more {
-  border: 1px solid rgb(170, 170, 170);
+  border: 0.5px solid rgba(170, 170, 170, 0.873);
 }
 
-.projects__content {
+.blog__more {
+  border: 0.5px solid rgb(213, 211, 211);
+}
+
+.projects__content,
+.blog__content {
   margin-bottom: 1.25rem;
 }
 
-.projects__subtitle {
+.projects__subtitle,
+.blog__subtitle {
   position: relative;
   display: inline-block;
   font-size: var(--small-font-size);
@@ -897,6 +915,11 @@ body.dark-theme {
   color: var(--title-color);
   margin-bottom: 0.75rem;
   padding-left: 1.75rem;
+}
+
+.blog__subtitle {
+  padding: 0;
+  font-size: 10px;
 }
 
 .projects__subtitle::after {
@@ -908,17 +931,32 @@ body.dark-theme {
   top: 50%;
   left: 0;
 }
-.projects__title {
+
+.projects__title,
+.blog__title {
   font-size: var(--h2-font-size);
   margin-bottom: 0.75rem;
 }
-.projects__buttons {
+
+.blog__title a {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+.blog__description a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.projects__buttons,
+.blog__buttons {
   display: flex;
   align-items: center;
   column-gap: 1rem;
 }
 
-.projects__link {
+.projects__link,
+.blog__link {
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
@@ -928,7 +966,13 @@ body.dark-theme {
   transition: color 0.4s;
 }
 
-.projects__link i {
+.blog__link {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+}
+
+.projects__link i,
+.blog__link i {
   font-size: 1rem;
   color: var(--title-color);
   transition: color 0.4s;
@@ -939,13 +983,22 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-.projects__card:hover {
+.blog__link:hover,
+.blog__link:hover i {
+  color: var(--first-color);
+}
+
+.projects__card:hover,
+.blog__card:hover {
   background-color: var(--white-color);
 }
+
+
 
 /*=============== CONTACT ===============*/
 .contact {
   padding-bottom: 0;
+  background-color: var(--container-color);
 }
 
 .contact__container {
@@ -958,7 +1011,7 @@ body.dark-theme {
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   padding: 3rem 1.5rem 3.5rem;
   margin-left: auto;
   border-bottom: 4px solid var(--first-color);
@@ -1273,6 +1326,10 @@ body.dark-theme {
     flex-direction: column;
   }
 
+  .blog__description {
+    margin-top: 1rem;
+  }
+
 }
 
 /* For medium devices */
@@ -1280,6 +1337,11 @@ body.dark-theme {
   .home__container,
   .about__container,
   .projects__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  .blog__container {
     grid-template-columns: 350px;
     justify-content: center;
   }
@@ -1323,6 +1385,16 @@ body.dark-theme {
     position: relative;
     flex-direction: column;
   }
+
+  .projects__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  .blog__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
   
 }
 
@@ -1332,6 +1404,10 @@ body.dark-theme {
   }
 
   .projects__container {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .blog__container {
     grid-template-columns: repeat(2, 350px);
   }
 
@@ -1645,11 +1721,11 @@ body.dark-theme {
   }
 
   /* Project Section */
-  .projects__container{
+  .projects__container {
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
   }
-  .projects__card{
+  .projects__card {
     padding: 1.25rem 1.25rem 2.5rem;
   }
   .projects__image{
@@ -1662,6 +1738,26 @@ body.dark-theme {
     bottom: 13.5rem;
     padding: 1rem;
   }
+
+
+  /* Blog Section */
+  .blog__container {
+    grid-template-columns: repeat(3, 352px);
+    padding-block: 3rem 1rem;
+  }
+
+  .blog__card{
+    padding: 1.25rem 1.25rem 2.5rem;
+  }
+  
+  .blog__image{
+    margin-bottom: 1rem;
+  }
+
+  .blog__content{
+    margin-bottom: 2rem;
+  }
+  
 
   /* Contact Section */
   .contact__container{
@@ -1747,7 +1843,7 @@ body.dark-theme {
 
 /* ================================================================== */
 
-/* Project Section */
+/* Project Section Project Page */
 
 .project {
   background-color: var(--container-color);

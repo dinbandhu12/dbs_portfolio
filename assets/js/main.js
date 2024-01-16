@@ -79,6 +79,7 @@ const sendEmail = (e) => {
 
 contactForm.addEventListener("submit", sendEmail);
 
+
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
@@ -87,6 +88,7 @@ const scrollUp = () =>{
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -108,6 +110,7 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
 
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById('theme-button')
@@ -139,6 +142,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -150,6 +154,6 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__perfil, .about__image, .contact__mail`, {origin: 'right'})
 sr.reveal(`.home__name, .home__info, .about__container .section__title-1, .about__info, .contact__social, .contact__data`, {origin: 'left'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})
+sr.reveal(`.services__card, .projects__card, .blog__card`, {interval: 100})
 
 
