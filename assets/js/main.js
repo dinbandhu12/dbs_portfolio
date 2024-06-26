@@ -49,10 +49,10 @@ const sendEmail = (e) => {
 
   emailjs
     .sendForm(
-      "service_0ljrb4r",
+      "service_hqu0vln",
       "template_zgrp9l9",
       "#contact-form",
-      "A7RVwJpYCbxZWMAed"
+      "vYf_BmIS7swau4LGP"
     )
     .then(
       () => {
